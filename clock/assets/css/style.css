@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+
+.clock-wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-wrapper .clock-img{
+    width: 300px;
+}
+
+.clock{
+    position: relative;
+}
+
+.clock-wrapper .arrow{
+    position: absolute;
+    width: 4px;
+    height: calc(50% - 50px);
+    background: black;
+    left: calc(50% - 4px);
+    bottom: 50%;
+    border-radius: 8px;
+    transition: transform 60s linear;
+    transform-origin: bottom;
+}
+
+.clock-wrapper .arrow.start{
+    transform: rotate(360deg);
+}
+
+.clock-wrapper .arrow::after{
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: black;
+    position: absolute;
+    bottom: -7px;
+    left: -5px;
+}
